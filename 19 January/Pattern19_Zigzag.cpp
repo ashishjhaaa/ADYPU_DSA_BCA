@@ -9,13 +9,15 @@ using namespace std;
 
 int main()
 {
-    int n = 9;
-
     for (int i = 1; i <= 3; i++)
     {
-        for (int j = 1; j <= n; j++)
+        for (int j = 1; j <= 9; j++)
         {
-            if ((i + j) % 4 == 0 || (i == 2 && j % 4 == 0))
+            if ((i == 1 || i == 3) && (j == 1 || j == 5 || j == 9))
+            {
+                cout << "*";
+            }
+            else if (i == 2 && (j == 3 || j == 7))
             {
                 cout << "*";
             }
